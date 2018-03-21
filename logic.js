@@ -14,6 +14,7 @@ $(document).ready(function() {
     clicked = $('.one');
     let prev_page = 'home';
     if (page_memory) {
+        alert("i remember!")
         $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     }
