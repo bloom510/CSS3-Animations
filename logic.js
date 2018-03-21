@@ -1,11 +1,8 @@
-/*
-
-*/
-
 $(document).ready(function() {
+    // $('.container').hide();
     clicked = $('.one');
     let right = [];
-    let left = [];
+
     let prev_page = 'home';
     $('nav li').click(function() {
         //remove current class and assign new
@@ -15,7 +12,7 @@ $(document).ready(function() {
 
         //get current position of link and move the slider
         let current_pos = ($('nav').width() / 6.8) * $('.current').index();
-        $('.slider').css('margin-left', `${current_pos}px`)
+        $('.slider').css('left', `${current_pos}px`)
 
         //CSS animations
         let page = $(this).attr('page');
@@ -25,16 +22,18 @@ $(document).ready(function() {
             setTimeout(function() {
                 $(`#${page}`).show().css('animation', 'show-center-from-right 2s forwards')
             }, 500)
+
             right.splice(right.indexOf(page))
+
         } else if (!right.includes(page)) {
             right.push(prev_page)
+
             setTimeout(function() {
                 $(`#${page}`).show().css('animation', 'show-center-from-left 2s forwards')
-
             }, 500);
+
             $(`#${prev_page}`).css('animation', 'hide-right 2s forwards').fadeOut(750)
 
-            // $(`#${page}`).show().css('animation', 'show-center-from-left 2s forwards')
         }
 
         prev_page = $(clicked).attr('page');
