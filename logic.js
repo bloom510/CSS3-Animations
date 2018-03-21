@@ -51,7 +51,8 @@ $(document).ready(function() {
 
         prev_page = $(clicked).attr('page');
         $('.slider').css('margin-left', `${current_pos}px`)
-        console.log(`Prevpage: ${prev_page} page: ${page} clicked: ${clicked.toString()}`)
+        console.log(`Prevpage: ${prev_page} page: ${page} `)
+        console.log('clicked', clicked)
 
     })
 
