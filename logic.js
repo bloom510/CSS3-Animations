@@ -13,10 +13,10 @@ $(document).ready(function() {
 
     clicked = $('.one');
     let prev_page = 'home';
-
-    $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
-    $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
-
+    if (page_memory) {
+        $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
+        $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
+    }
     $('nav li').click(function() {
         //remove current class and assign new
         if (clicked) clicked.removeClass('current');
