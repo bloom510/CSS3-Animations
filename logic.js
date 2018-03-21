@@ -10,7 +10,7 @@ $(document).ready(function() {
     let page_memory = document.cookie;
     let page;
     getCookie('page')
-    alert(page)
+
     clicked = $('.one');
     let prev_page = 'home';
 
