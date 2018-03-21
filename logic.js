@@ -12,7 +12,7 @@ $(document).ready(function() {
     getCookie('page')
 
     clicked = $('.home');
-    let current_pos = ($('nav').width() / 6.8) * $('.current').index();
+
     let prev_page = 'home';
     if (page_memory) {
         //remove current class from one
@@ -20,8 +20,6 @@ $(document).ready(function() {
         //add current class to the stored page
         $(`.${page}`).addClass('current');
 
-
-        $('.slider').css('left', `${current_pos}px`)
 
         //animate slider and page
         $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
@@ -34,7 +32,7 @@ $(document).ready(function() {
         $(this).addClass('current');
 
         //get current position of link and move the slider
-        current_pos = ($('nav').width() / 6.8) * $('.current').index();
+        let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('left', `${current_pos}px`)
 
         //CSS animations
