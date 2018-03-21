@@ -28,8 +28,7 @@ $(document).ready(function() {
     $('.slider').css('margin-left', `${current_pos}px`)
 
     $('nav li').click(function() {
-        console.log(`Prevpage: ${prev_page} page: ${page} clicked: ${clicked.toString()}`)
-            //remove current class and assign new
+        //remove current class and assign new
         if (clicked) clicked.removeClass('current');
         clicked = $(this);
         $(this).addClass('current');
@@ -52,6 +51,7 @@ $(document).ready(function() {
 
         prev_page = $(clicked).attr('page');
         $('.slider').css('margin-left', `${current_pos}px`)
+        console.log(`Prevpage: ${prev_page} page: ${page} clicked: ${clicked.toString()}`)
 
     })
 
