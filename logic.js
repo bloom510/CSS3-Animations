@@ -12,9 +12,14 @@ $(document).ready(function() {
     getCookie('page')
 
     clicked = $('.one');
+
     let prev_page = 'home';
     if (page_memory) {
-        alert("i remember!")
+        //remove current class from one
+        $('.one').removeClass('.current');
+        //add current class to the stored page
+
+        //animate slider and page
         $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     }
