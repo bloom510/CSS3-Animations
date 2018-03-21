@@ -7,7 +7,6 @@ $(document).ready(function() {
     }
 
     // $('.container').hide();
-    let current_pos = ($('nav').width() / 6.8) * $('.current').index();
     let page_memory = document.cookie;
     let page;
     getCookie('page')
@@ -16,8 +15,6 @@ $(document).ready(function() {
     let prev_page = 'home';
     if (page_memory) {
         alert("i remember!")
-        $(`#${page}`).addClass('current');
-        $('.slider').css('left', `${current_pos}px`)
         $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     }
@@ -28,7 +25,7 @@ $(document).ready(function() {
         $(this).addClass('current');
 
         //get current position of link and move the slider
-
+        let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('left', `${current_pos}px`)
 
         //CSS animations
