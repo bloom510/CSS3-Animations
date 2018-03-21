@@ -21,13 +21,14 @@ $(document).ready(function() {
         //add current class to the stored page
         $(`.${page}`).addClass('current');
 
-        //get current position of link and move the slider
-        let current_pos = ($('nav').width() / 6.8) * $('.current').index();
-        $('.slider').css('left', `${current_pos}px`)
-            //animate slider and page
+        //animate slider and page
         $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     }
+
+    //get current position of link and move the slider
+    let current_pos = ($('nav').width() / 6.8) * $('.current').index();
+    $('.slider').css('left', `${current_pos}px`)
     $('nav li').click(function() {
         //remove current class and assign new
         if (clicked) clicked.removeClass('current');
