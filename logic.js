@@ -20,7 +20,7 @@ $(document).ready(function() {
             $(`#${prev_page}`).css('animation', 'hide-left 2s forwards').fadeOut(750)
 
             setTimeout(function() {
-                $(`#${page}`).show().css('animation', 'show-center-from-right 2s forwards')
+                $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-right 2s forwards')
             }, 500)
 
             right.splice(right.indexOf(page))
@@ -29,7 +29,7 @@ $(document).ready(function() {
             right.push(prev_page)
 
             setTimeout(function() {
-                $(`#${page}`).show().css('animation', 'show-center-from-left 2s forwards')
+                $(`#${page}`).fadeIn(2500).css('animation', 'show-center-from-left 2s forwards')
             }, 500);
 
             $(`#${prev_page}`).css('animation', 'hide-right 2s forwards').fadeOut(750)
@@ -37,15 +37,13 @@ $(document).ready(function() {
         }
 
         prev_page = $(clicked).attr('page');
+        $('.slider').css('margin-left', `${current_pos}px`)
         console.log(right)
     })
 
-    $('nav li ').hover(function() {
-        let current_pos = ($('nav').width() / 6.8) * $(this).index();
-        $('.slider').css('margin-left', `${current_pos}px`)
-    })
-    $('nav li ').mouseleave(function() {
-        let current_pos = ($('nav').width() / 6.8) * $('.current').index();
-        $('.slider').css('margin-left', `${current_pos}px`)
-    })
+
+    // $('nav li ').mouseleave(function() {
+    //     let current_pos = ($('nav').width() / 6.8) * $('.current').index();
+    //     $('.slider').css('margin-left', `${current_pos}px`)
+    // })
 })

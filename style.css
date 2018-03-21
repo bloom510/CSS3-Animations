@@ -166,14 +166,14 @@ footer {
         transform: translateY(0%);
     }
     100% {
-        transform: translateY(-300%);
+        transform: translateY(300%);
         visibility: hidden;
     }
 }
 
 @keyframes show-center-from-left {
     0% {
-        transform: translateY(-300%);
+        transform: translateY(300%);
     }
     100% {
         transform: translateY(0%);

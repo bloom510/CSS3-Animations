@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Great Site</title>
+    <title>bloom.510</title>
     <link rel='stylesheet' type='text/css' href='./style.css'>
     <link href="https://fonts.googleapis.com/css?family=Barlow|Rock+Salt" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -41,11 +41,12 @@
 
         <section id='home'>
             <div class='triangle'></div>
-            <header>Home </header>
+            <header>nathan bloomfield : web developer</header>
 
-            <hr> Hey there, I'm Nathan! I'm a unique blend of creative and analytical: a Berkeley native jazz conservatory-trained musician, web developer, and multimedia artist passionate about interactive experiences at the intersection of music, art, and
+            <hr>Hey there, I'm Nathan! I'm a unique blend of creative and analytical: a Berkeley native jazz conservatory-trained musician, web developer, and multimedia artist passionate about interactive experiences at the intersection of music, art, and
             technology. Take a look at my portfolio to see my Multidisciplinary, Web Development, Musical, and Theoretical works. For a snapshot of my skills, interests, and work experience, my résumé can be viewed here.
-            <br>
+
+
             <!-- <footer>
                 &copy;2018 Site by Nathan Bloomfield
             </footer> -->
@@ -82,6 +83,7 @@
             </p>
         </section>
         <section id='portfolio'>
+            <div class='triangle'></div>
             <header>Portfolio</header>
             <hr>
             <p>
@@ -175,10 +177,11 @@
 
     </div>
     <script>
+        let sections = document.getElementsByClassName("triangle");
         for (let pct1 = 5; pct1 < 100; pct1 += 15) {
             let hr1 = `<div class='line' style='width:${pct1}%;'>`;
-            for (let i = 0; i < 4; i++) {
-                document.getElementsByClassName("triangle")[i].innerHTML += hr1;
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].innerHTML += hr1;
             }
         }
     </script>
