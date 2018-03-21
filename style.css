@@ -34,13 +34,12 @@ nav {
     top: -35%;
     left: -50%;
     z-index: -1000;
+    margin-bottom: 5%;
 }
 
 .divider {
     background-color: #eee;
-    /* background-color: black; */
     border: 0 none;
-    /* color: black; */
     height: 1px;
     position: absolute;
     left: -50%;
@@ -49,6 +48,7 @@ nav {
 
 .nav-container {
     width: 100%;
+    /* position: fixed; */
 }
 
 ul li {
@@ -75,6 +75,30 @@ a {
     /* display: block; */
 }
 
+.line {
+    display: block;
+    margin: 0 auto;
+    border-bottom: 1.25px solid;
+    height: 3px;
+}
+
+.triangle {
+    /* height: .075rem; */
+    /* border: 2px solid red; */
+    width: 30px;
+    margin-right: -15%;
+    /* overflow: show; */
+    display: block;
+    float: left;
+    /* margin-bottom: 3%; */
+}
+
+.site-title {
+    position: absolute;
+    left: -25%;
+    font-family: 'Rock Salt', cursive;
+}
+
 #home,
 #about,
 #portfolio,
@@ -82,10 +106,9 @@ a {
 #skills {
     position: relative;
     border: 1px solid;
-    /* border-top: none; */
     width: 100%;
     max-height: 2000px;
-    /* margin: 0 auto; */
+    margin-bottom: 5%;
     float: left;
     left: -10%;
     line-height: 25px;
@@ -100,6 +123,14 @@ a {
 header {
     text-align: center;
     font-size: 24px;
+}
+
+footer {
+    position: absolute;
+    float: left;
+    bottom: 0;
+    /* margin-bottom: 5%; */
+    /* margin-left: -10%; */
 }
 
 #about,
