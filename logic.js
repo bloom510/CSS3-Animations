@@ -11,14 +11,15 @@ $(document).ready(function() {
     let page;
     getCookie('page')
 
-    clicked = $('.one');
+    clicked = $('.home');
 
     let prev_page = 'home';
     if (page_memory) {
         //remove current class from one
-        $('.one').removeClass('.current');
+        $('.home').removeClass('.current');
         //add current class to the stored page
-        $(`#${page}`).addClass('.current');
+        $(`.${page}`).addClass('.current');
+
         let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('left', `${current_pos}px`)
             //animate slider and page
