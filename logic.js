@@ -3,13 +3,14 @@ $(document).ready(function() {
         var re = new RegExp(name + "=([^;]+)");
         var value = re.exec(document.cookie);
 
-        alert((value != null) ? unescape(value[1]) : null);
+        (value != null) ? page = unescape(value[1]): null;
     }
 
     // $('.container').hide();
     let page_memory = document.cookie;
+    let page;
     getCookie('page')
-
+    alert(page)
     clicked = $('.one');
     let prev_page = 'home';
 
