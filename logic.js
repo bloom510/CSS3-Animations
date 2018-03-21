@@ -1,9 +1,10 @@
 $(document).ready(function() {
     // $('.container').hide();
+    let page_memory = document.cookie;
+    alert(page_memory)
     clicked = $('.one');
-    let right = [];
-
     let prev_page = 'home';
+
     $('nav li').click(function() {
         //remove current class and assign new
         if (clicked) clicked.removeClass('current');
@@ -16,34 +17,19 @@ $(document).ready(function() {
 
         //CSS animations
         let page = $(this).attr('page');
-        if (right.includes(page)) {
-            $(`#${prev_page}`).css('animation', 'hide-left 2s forwards').fadeOut(750)
+        if (page !== prev_page) {
+            $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
 
             setTimeout(function() {
-                $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-right 2s forwards')
+                $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
+                page_memory = document.cookie = `page = ${page};`;
             }, 500)
-
-            right.splice(right.indexOf(page))
-
-        } else if (!right.includes(page)) {
-            right.push(prev_page)
-
-            setTimeout(function() {
-                $(`#${page}`).fadeIn(2500).css('animation', 'show-center-from-left 2s forwards')
-            }, 500);
-
-            $(`#${prev_page}`).css('animation', 'hide-right 2s forwards').fadeOut(750)
 
         }
 
         prev_page = $(clicked).attr('page');
         $('.slider').css('margin-left', `${current_pos}px`)
-        console.log(right)
+
     })
 
-
-    // $('nav li ').mouseleave(function() {
-    //     let current_pos = ($('nav').width() / 6.8) * $('.current').index();
-    //     $('.slider').css('margin-left', `${current_pos}px`)
-    // })
 })

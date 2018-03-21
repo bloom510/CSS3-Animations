@@ -151,7 +151,7 @@ footer {
     top: 0;
 }
 
-@keyframes hide-right {
+@keyframes hide-down {
     0% {
         transform: translateY(0%);
     }
@@ -161,26 +161,7 @@ footer {
     }
 }
 
-@keyframes hide-left {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(300%);
-        visibility: hidden;
-    }
-}
-
-@keyframes show-center-from-left {
-    0% {
-        transform: translateY(300%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-@keyframes show-center-from-right {
+@keyframes show-center-from-bottom {
     0% {
         transform: translateY(300%);
     }
