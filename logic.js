@@ -16,20 +16,17 @@ $(document).ready(function() {
     let prev_page = 'home';
     if (page_memory) {
         //remove current class from one
-        $('.home').removeClass('current');
+        $('.home').removeClass('.current');
         //add current class to the stored page
         $(`.${page}`).addClass('current');
-        current_pos = ($('nav').width() / 6.8) * $('.current').index();
+
 
         $('.slider').css('left', `${current_pos}px`)
 
         //animate slider and page
         $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
-    } else {
-        $('.slider').css('margin-left', `${current_pos}px`)
     }
-
     $('nav li').click(function() {
         //remove current class and assign new
         if (clicked) clicked.removeClass('current');
@@ -37,7 +34,7 @@ $(document).ready(function() {
         $(this).addClass('current');
 
         //get current position of link and move the slider
-        let current_pos = ($('nav').width() / 6.8) * $('.current').index();
+        current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('left', `${current_pos}px`)
 
         //CSS animations
