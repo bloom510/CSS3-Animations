@@ -1,9 +1,20 @@
 $(document).ready(function() {
+    function getCookie(name) {
+        var re = new RegExp(name + "=([^;]+)");
+        var value = re.exec(document.cookie);
+        alert(value);
+        return (value != null) ? unescape(value[1]) : null;
+    }
+
     // $('.container').hide();
     let page_memory = document.cookie;
-    alert(page_memory)
+    getCookie('page')
+
     clicked = $('.one');
     let prev_page = 'home';
+
+    $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
+    $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
 
     $('nav li').click(function() {
         //remove current class and assign new
@@ -32,4 +43,4 @@ $(document).ready(function() {
 
     })
 
-})
+}) s
