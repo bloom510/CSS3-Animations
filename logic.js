@@ -27,6 +27,7 @@ $(document).ready(function() {
         $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     }
+    $('.slider').css('margin-left', `${current_pos}px`)
     $('nav li').click(function() {
         //remove current class and assign new
         if (clicked) clicked.removeClass('current');
