@@ -9,18 +9,15 @@ $(document).ready(function() {
     // $('.container').hide();
     let page_memory = document.cookie;
     let page;
-    getCookie('page')
-
     clicked = $('.home');
-
     let prev_page = 'home';
+    getCookie('page')
     if (page_memory) {
-
+        prev_page = page;
         //remove current class from one
         $('.home').removeClass('current');
         //add current class to the stored page
         $(`.${page}`).addClass('current');
-
         //animate slider and page
         $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
@@ -31,7 +28,8 @@ $(document).ready(function() {
     $('.slider').css('margin-left', `${current_pos}px`)
 
     $('nav li').click(function() {
-        //remove current class and assign new
+        console.log(`Prevpage: ${prev_page} page: ${page} clicked: ${clicked}`)
+            //remove current class and assign new
         if (clicked) clicked.removeClass('current');
         clicked = $(this);
         $(this).addClass('current');
