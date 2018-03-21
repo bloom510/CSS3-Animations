@@ -16,7 +16,7 @@ $(document).ready(function() {
     let prev_page = 'home';
     if (page_memory) {
         //remove current class from one
-        $('.home').removeClass('.current');
+        $('.home').removeClass('current');
         //add current class to the stored page
         $(`.${page}`).addClass('current');
 
