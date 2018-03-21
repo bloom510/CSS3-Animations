@@ -28,7 +28,8 @@ $(document).ready(function() {
 
     //get current position of link and move the slider
     let current_pos = ($('nav').width() / 6.8) * $('.current').index();
-    $('.slider').css('left', `${current_pos}px`)
+    $('.slider').css('margin-left', `${current_pos}px`)
+
     $('nav li').click(function() {
         //remove current class and assign new
         if (clicked) clicked.removeClass('current');
