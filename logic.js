@@ -28,7 +28,7 @@ $(document).ready(function() {
     $('.slider').css('margin-left', `${current_pos}px`)
 
     $('nav li').click(function() {
-        console.log(`Prevpage: ${prev_page} page: ${page} clicked: ${clicked}`)
+        console.log(`Prevpage: ${prev_page} page: ${page} clicked: ${clicked.toString()}`)
             //remove current class and assign new
         if (clicked) clicked.removeClass('current');
         clicked = $(this);
