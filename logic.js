@@ -16,12 +16,13 @@ $(document).ready(function() {
     let prev_page = 'home';
     if (page_memory) {
         //remove current class from one
-        $('.home').removeClass('.current');
+        $('.home').removeClass('current');
         //add current class to the stored page
-        $(`.${page}`).addClass('.current');
+        $(`.${page}`).addClass('current');
 
         let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('left', `${current_pos}px`)
+        alert()
             //animate slider and page
         $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
