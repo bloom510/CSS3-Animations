@@ -2,7 +2,7 @@ $(document).ready(function() {
     function getCookie(name) {
         var re = new RegExp(name + "=([^;]+)");
         var value = re.exec(document.cookie);
-        alert(value);
+        alert(re);
         return (value != null) ? unescape(value[1]) : null;
     }
 
