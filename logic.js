@@ -33,37 +33,38 @@ $(document).ready(function() {
     $('nav li').click(function() {
         //remove current class and assign new
         if (clicked) {
+            //turn old click into prev_page, so we know to hide it
             prev_page = clicked.attr('page');
+            //store prev_page as cookie
             $.cookie('prev_page', prev_page);
+            //remove current class from old click
             clicked.removeClass('current');
         }
+        //assign new click to last clicked
         clicked = $(this);
-
+        //add current class to new click
         $(this).addClass('current');
 
         //get current position of link and move the slider
         let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('left', `${current_pos}px`)
 
-        //CSS animations
+        //page is new click
         page = $(this).attr('page');
+        //if new page click
         if (page !== prev_page) {
+            //hide prev_page
             $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
-
+                //show the new page
             setTimeout(function() {
                 $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
-                page_memory = document.cookie = `page = ${page};`;
-                // document.cookie = `clicked = ${clicked.attr('class')}`
-
             }, 500)
 
         }
 
-        prev_page = $(clicked).attr('page');
+        // prev_page = $(clicked).attr('page');
 
         $('.slider').css('margin-left', `${current_pos}px`)
-        console.log(`Prevpage: ${prev_page} page: ${page} `)
-        console.log('clicked', clicked)
 
     })
 
