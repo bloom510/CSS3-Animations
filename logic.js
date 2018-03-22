@@ -14,9 +14,8 @@ $(document).ready(function() {
         page = $.cookie('page');
         prev_page = $.cookie('prev_page');
         //remove current class from one
-        if (prev_page) $(`#${prev_page}`).removeClass('current');
-        else $('.home').removeClass('current')
-            //add current class to the stored page
+        $(`#${prev_page}`).removeClass('current');
+        //add current class to the stored page
         $(`.${page}`).addClass('current');
         let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('margin-left', `${current_pos}px`)
