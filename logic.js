@@ -3,7 +3,7 @@ $(document).ready(function() {
         var re = new RegExp(name + "=([^;]+)");
         var value = re.exec(document.cookie);
 
-        (value != null) ? page = unescape(value[1]): null;
+        (value != null) ? page = unescape(value[2]): null;
     }
 
     // $('.container').hide();
