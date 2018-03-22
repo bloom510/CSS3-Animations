@@ -14,7 +14,7 @@ $(document).ready(function() {
         page = $.cookie('page');
         prev_page = $.cookie('prev_page');
         //remove current class from one
-        $(`#${prev_page}`).removeClass('current');
+        $(`.${prev_page}`).removeClass('current');
         //add current class to the stored page
         $(`.${page}`).addClass('current');
         let current_pos = ($('nav').width() / 6.8) * $('.current').index();
