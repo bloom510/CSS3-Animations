@@ -8,8 +8,8 @@ $(document).ready(function() {
     clicked = $('.home');
     let prev_page;
 
-    alert('page', $.cookie('page'))
-    alert('prev_page', $.cookie('prev_page'))
+    alert(`'page', ${$.cookie('page')}`)
+    alert(`'prev_page', ${$.cookie('prev_page')}`)
     if (page_memory) {
         page = $.cookie('page');
         prev_page = $.cookie('prev_page');
