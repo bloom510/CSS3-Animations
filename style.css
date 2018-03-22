@@ -205,7 +205,7 @@
         #skills {
             margin: 0 auto;
             padding: 3.5%;
-            width: 100%;
+            width: 120%;
         }
         .container {
             width: 70%;
@@ -217,7 +217,7 @@
         }
         .nav-container {
             width: 150%;
-            margin-left: -30%;
+            margin-left: -15%;
         }
         .nav-bg {
             width: 150%;
