@@ -9,7 +9,9 @@ $(document).ready(function() {
     let prev_page;
 
     if (page_memory) {
+
         page = $.cookie('page');
+        clicked = $(`.${page}`)
         prev_page = $.cookie('prev_page');
         //remove current class from home and/or prev page
         $(`.home`).removeClass('current');
