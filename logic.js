@@ -51,7 +51,8 @@ $(document).ready(function() {
 
         //page is new click
         page = $(this).attr('page');
-        //if new page click
+        $.cookie('page', page)
+            //if new page click
         if (page !== prev_page) {
             //hide prev_page
             $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
