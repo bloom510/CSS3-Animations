@@ -1,7 +1,6 @@
 $(document).ready(function() {
     //page memory contains cookies
     let page_memory = document.cookie;
-    let current_pos = ($('nav').width() / 6.8) * $('.current').index();
     //current page
     let page;
     //default value for clicked (helper for animated slider)
@@ -19,7 +18,7 @@ $(document).ready(function() {
         //add current class to the stored page
         $(`.${page}`).addClass('current');
         //animate slider
-
+        let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('margin-left', `${current_pos}px`);
         //hide and show appropriate sections
         if (page !== 'home') $('#home').hide()
@@ -27,7 +26,7 @@ $(document).ready(function() {
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     }
     //get current position of link and move the slider
-
+    let current_pos = ($('nav').width() / 6.8) * $('.current').index();
     $('.slider').css('margin-left', `${current_pos}px`)
 
     $('nav li').click(function() {
