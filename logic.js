@@ -1,10 +1,5 @@
 $(document).ready(function() {
-    function getCookie(name) {
-        var re = new RegExp(name + "=([^;]+)");
-        var value = re.exec(document.cookie);
 
-        (value != null) ? page = unescape(value[1]): null;
-    }
 
     // $('.container').hide();
     let page_memory = document.cookie;
@@ -12,12 +7,12 @@ $(document).ready(function() {
 
     clicked = $('.home');
     let prev_page = 'home';
-    getCookie('page')
+
+    alert($.cookie('page'))
     if (page_memory) {
         prev_page = page;
         //remove current class from one
         $('.home').removeClass('current');
-        clicked = page;
         //add current class to the stored page
         $(`.${page}`).addClass('current');
         //animate slider and page
@@ -47,7 +42,8 @@ $(document).ready(function() {
             setTimeout(function() {
                 $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
                 page_memory = document.cookie = `page = ${page};`;
-                document.cookie = `clicked = ${clicked.attr('class')}`
+                // document.cookie = `clicked = ${clicked.attr('class')}`
+                $.cookie('clicked', clicked.attr('class'));
             }, 500)
 
         }
