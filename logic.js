@@ -9,7 +9,7 @@ $(document).ready(function() {
     //stores previous page after click to a new page
     let prev_page;
     if (params) {
-        page = params.page;
+        page = params.section;
         clicked = $(`.${page}`)
         $(`.home`).removeClass('current');
         $(`.${page}`).addClass('current');
