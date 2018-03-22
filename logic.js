@@ -8,22 +8,20 @@ $(document).ready(function() {
     clicked = $('.home');
     let prev_page;
 
-    alert(`'page', ${$.cookie('page')}`)
-    alert(`'prev_page', ${$.cookie('prev_page')}`)
-
     if (page_memory) {
         page = $.cookie('page');
-        alert(`' i remembered the page! ${page}'`)
+
         prev_page = $.cookie('prev_page');
-        //remove current class from one
+        //remove current class from home and/or prev page
         $(`.home`).removeClass('current');
         $(`.${prev_page}`).removeClass('current');
         //add current class to the stored page
         $(`.${page}`).addClass('current');
+        //animate slider
         let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('margin-left', `${current_pos}px`)
-            //animate slider and page
-        $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
+            //hide and show appropriate sections
+        $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     } else {
         prev_page = 'home'
