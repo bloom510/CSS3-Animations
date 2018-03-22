@@ -17,7 +17,9 @@ $(document).ready(function() {
         $(`#${prev_page}`).removeClass('current');
         //add current class to the stored page
         $(`.${page}`).addClass('current');
-        //animate slider and page
+        let current_pos = ($('nav').width() / 6.8) * $('.current').index();
+        $('.slider').css('left', `${current_pos}px`)
+            //animate slider and page
         $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     }
