@@ -3,7 +3,7 @@ $(document).ready(function() {
         var re = new RegExp(name + "=([^;]+)");
         var value = re.exec(document.cookie);
 
-        (value != null) ? page = unescape(value[2]): null;
+        (value != null) ? page = unescape(value[1]): null;
     }
 
     // $('.container').hide();
@@ -46,7 +46,8 @@ $(document).ready(function() {
 
             setTimeout(function() {
                 $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
-                page_memory = document.cookie = `page = ${page}; clicked = ${clicked.attr('class')};`;
+                page_memory = document.cookie = `page = ${page};`;
+                document.cookie = `clicked = ${clicked}`
             }, 500)
 
         }
