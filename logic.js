@@ -12,6 +12,7 @@ $(document).ready(function() {
     alert(`'prev_page', ${$.cookie('prev_page')}`)
     if (page_memory) {
         page = $.cookie('page');
+        alert(`' i remembered the page! ${page}'`)
         prev_page = $.cookie('prev_page');
         //remove current class from one
         $(`.${prev_page}`).removeClass('current');
