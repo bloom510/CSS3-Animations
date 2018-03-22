@@ -13,6 +13,7 @@ $(document).ready(function() {
     if (page_memory) {
         page = $.cookie('page');
         prev_page = $.cookie('prev_page');
+        $(`.home`).removeClass('current');
         //remove current class from one
         $(`.${prev_page}`).removeClass('current');
         //add current class to the stored page
