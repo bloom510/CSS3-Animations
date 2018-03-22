@@ -9,6 +9,7 @@ $(document).ready(function() {
     // $('.container').hide();
     let page_memory = document.cookie;
     let page;
+
     clicked = $('.home');
     let prev_page = 'home';
     getCookie('page')
@@ -16,6 +17,7 @@ $(document).ready(function() {
         prev_page = page;
         //remove current class from one
         $('.home').removeClass('current');
+        clicked = page;
         //add current class to the stored page
         $(`.${page}`).addClass('current');
         //animate slider and page
@@ -44,7 +46,7 @@ $(document).ready(function() {
 
             setTimeout(function() {
                 $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
-                page_memory = document.cookie = `page = ${page};`;
+                page_memory = document.cookie = `page = ${page};, clicked = ${clicked}`;
             }, 500)
 
         }
