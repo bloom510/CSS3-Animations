@@ -35,7 +35,8 @@ $(document).ready(function() {
         if (clicked) {
             //turn old click into prev_page, so we know to hide it
             prev_page = clicked.attr('page');
-            //store prev_page as cookie
+            $.cookie('prev_page', prev_page)
+                //store prev_page as cookie
             $.cookie('prev_page', prev_page);
             //remove current class from old click
             clicked.removeClass('current');
