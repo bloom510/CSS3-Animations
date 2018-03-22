@@ -9,9 +9,9 @@ $(document).ready(function() {
     let prev_page = 'home';
 
     alert($.cookie('page'))
-    alert($.cookie('clicked'))
+    alert($.cookie('prev_page'))
     if (page_memory) {
-        prev_page = page;
+
         //remove current class from one
         // $('.home').removeClass('current');
         //add current class to the stored page
@@ -44,12 +44,13 @@ $(document).ready(function() {
                 $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
                 page_memory = document.cookie = `page = ${page};`;
                 // document.cookie = `clicked = ${clicked.attr('class')}`
-                $.cookie('clicked', clicked.attr('class'));
+
             }, 500)
 
         }
 
         prev_page = $(clicked).attr('page');
+        $.cookie('prev_page', prev_page);
         $('.slider').css('margin-left', `${current_pos}px`)
         console.log(`Prevpage: ${prev_page} page: ${page} `)
         console.log('clicked', clicked)
