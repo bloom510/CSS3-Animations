@@ -11,9 +11,10 @@ $(document).ready(function() {
     alert($.cookie('page'))
     alert($.cookie('prev_page'))
     if (page_memory) {
-
+        page = $.cookie('page');
+        prev_page = $.cookie('prev_page');
         //remove current class from one
-        // $('.home').removeClass('current');
+        $(`#${prev_page}`).removeClass('current');
         //add current class to the stored page
         $(`.${page}`).addClass('current');
         //animate slider and page
@@ -27,8 +28,13 @@ $(document).ready(function() {
 
     $('nav li').click(function() {
         //remove current class and assign new
-        if (clicked) clicked.removeClass('current');
+        if (clicked) {
+            prev_page = clicked.attr('page');
+            $.cookie('prev_page', prev_page);
+            clicked.removeClass('current');
+        }
         clicked = $(this);
+
         $(this).addClass('current');
 
         //get current position of link and move the slider
@@ -50,7 +56,7 @@ $(document).ready(function() {
         }
 
         prev_page = $(clicked).attr('page');
-        $.cookie('prev_page', prev_page);
+
         $('.slider').css('margin-left', `${current_pos}px`)
         console.log(`Prevpage: ${prev_page} page: ${page} `)
         console.log('clicked', clicked)
