@@ -46,7 +46,7 @@ $(document).ready(function() {
 
             setTimeout(function() {
                 $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
-                page_memory = document.cookie = `page = ${page}; clicked = ${clicked}`;
+                page_memory = document.cookie = `page = ${page}; clicked = ${clicked};`;
             }, 500)
 
         }
