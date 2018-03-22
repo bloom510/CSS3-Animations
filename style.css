@@ -211,7 +211,56 @@
             width: 70%;
         }
         .site-title {
-            /* display: none; */
+            top: 10%;
+            left: 33%;
+        }
+        .nav-container {
+            width: 150%;
+            margin-left: -15%;
+        }
+        .nav-bg {
+            width: 150%;
+            height: 130%;
+        }
+        li a {
+            margin-top: 15%;
+        }
+        .divider {
+            left: -50%;
+            top: 89%;
+            width: 150%;
+        }
+        .triangle {
+            margin-right: 2%;
+        }
+        .occupation {
+            font-size: 16px;
+        }
+    }
+    
+    @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+        html {
+            transform: rotate(-90deg);
+            transform-origin: left top;
+            width: 100vh;
+            overflow-x: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+        #home,
+        #about,
+        #portfolio,
+        #contact,
+        #skills {
+            margin: 0 auto;
+            padding: 3.5%;
+            width: 120%;
+        }
+        .container {
+            width: 70%;
+        }
+        .site-title {
             top: 10%;
             left: 33%;
         }
