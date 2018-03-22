@@ -6,7 +6,7 @@ $(document).ready(function() {
     let page;
 
     clicked = $('.home');
-    let prev_page = 'home';
+    let prev_page;
 
     alert($.cookie('page'))
     alert($.cookie('prev_page'))
@@ -22,6 +22,8 @@ $(document).ready(function() {
             //animate slider and page
         $(`#home`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
+    } else {
+        prev_page = 'home'
     }
 
     //get current position of link and move the slider
