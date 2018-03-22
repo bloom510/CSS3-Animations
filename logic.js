@@ -21,6 +21,7 @@ $(document).ready(function() {
         let current_pos = ($('nav').width() / 6.8) * $('.current').index();
         $('.slider').css('margin-left', `${current_pos}px`)
             //hide and show appropriate sections
+        if (page !== 'home') $('#home').hide()
         $(`#${prev_page}`).css('animation', 'hide-down 2s forwards').fadeOut(750)
         $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
     } else {
