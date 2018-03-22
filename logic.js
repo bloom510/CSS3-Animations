@@ -47,14 +47,14 @@ $(document).ready(function() {
             setTimeout(function() {
                 $(`#${page}`).fadeIn(1500).css('animation', 'show-center-from-bottom 2s forwards')
                 page_memory = document.cookie = `page = ${page};`;
-                document.cookie = `clicked = ${clicked}`
+                document.cookie = `clicked = ${clicked.attr('class')}`
             }, 500)
 
         }
 
         prev_page = $(clicked).attr('page');
         $('.slider').css('margin-left', `${current_pos}px`)
-        console.log(`Prevpage: ${prev_page} page: ${page.attr('class');} `)
+        console.log(`Prevpage: ${prev_page} page: ${page} `)
         console.log('clicked', clicked)
 
     })
