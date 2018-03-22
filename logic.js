@@ -8,8 +8,8 @@ $(document).ready(function() {
     clicked = $('.home');
     let prev_page;
 
-    alert($.cookie('page'))
-    alert($.cookie('prev_page'))
+    alert('page', $.cookie('page'))
+    alert($ 'prev_page', .cookie('prev_page'))
     if (page_memory) {
         page = $.cookie('page');
         prev_page = $.cookie('prev_page');
@@ -35,8 +35,7 @@ $(document).ready(function() {
         if (clicked) {
             //turn old click into prev_page, so we know to hide it
             prev_page = clicked.attr('page');
-            $.cookie('prev_page', prev_page)
-                //store prev_page as cookie
+            //store prev_page as cookie
             $.cookie('prev_page', prev_page);
             //remove current class from old click
             clicked.removeClass('current');
