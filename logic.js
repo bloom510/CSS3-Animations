@@ -10,7 +10,6 @@ $(document).ready(function() {
 
     if (page_memory) {
         page = $.cookie('page');
-
         prev_page = $.cookie('prev_page');
         //remove current class from home and/or prev page
         $(`.home`).removeClass('current');
@@ -55,6 +54,8 @@ $(document).ready(function() {
         //page is new click
         page = $(this).attr('page');
         $.cookie('page', page)
+        alert(prev_page)
+        alert(page)
             //if new page click
         if (page !== prev_page) {
             //hide prev_page
