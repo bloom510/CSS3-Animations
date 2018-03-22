@@ -9,10 +9,11 @@ $(document).ready(function() {
     let prev_page = 'home';
 
     alert($.cookie('page'))
+    alert($.cookie('clicked'))
     if (page_memory) {
         prev_page = page;
         //remove current class from one
-        $('.home').removeClass('current');
+        // $('.home').removeClass('current');
         //add current class to the stored page
         $(`.${page}`).addClass('current');
         //animate slider and page
