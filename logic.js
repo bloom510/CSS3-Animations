@@ -34,7 +34,7 @@ $(document).ready(function() {
     $('nav li').click(function() {
         //remove current class and assign new
         if (clicked) {
-            if (page) page.removeClass('current');
+            if (page) $(`.${page}`).removeClass('current');
             //turn old click into prev_page, so we know to hide it
             prev_page = clicked.attr('page');
             //store prev_page as cookie
