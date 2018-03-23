@@ -8,6 +8,7 @@
                                                                                             
                                                                                             .container {
                                                                                                 position: absolute;
+                                                                                                margin: 0 auto;
                                                                                                 width: 100%;
                                                                                                 height: 100%;
                                                                                                 max-width: 760px;
@@ -16,6 +17,7 @@
                                                                                                 bottom: 0;
                                                                                                 right: 0;
                                                                                                 left: 25%;
+                                                                                                /* border: 2px solid red; */
                                                                                             }
                                                                                             
                                                                                             nav {
@@ -206,7 +208,8 @@
                                                                                                 #skills {
                                                                                                     margin: 0 auto;
                                                                                                     padding: 3.5%;
-                                                                                                    width: 100%;
+                                                                                                    width: 140%;
+                                                                                                    margin-bottom: 5%;
                                                                                                 }
                                                                                                 .site-title {
                                                                                                     left: 45%;
@@ -220,9 +223,10 @@
                                                                                                 }
                                                                                                 .container {
                                                                                                     width: 70%;
+                                                                                                    /* border: 2px solid red; */
                                                                                                 }
                                                                                                 .nav-container {
-                                                                                                    margin-left: -61%;
+                                                                                                    margin-left: -41%;
                                                                                                     margin-bottom: 5%;
                                                                                                     width: 190%;
                                                                                                 }
@@ -246,5 +250,4 @@
                                                                                                     top: 100%;
                                                                                                     left: 0;
                                                                                                 }
-                                                                                                */
                                                                                             }
