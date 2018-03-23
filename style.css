@@ -32,7 +32,7 @@
                                                                                             
                                                                                             .nav-bg {
                                                                                                 position: absolute;
-                                                                                                width: 100%;
+                                                                                                width: 110%;
                                                                                                 height: 50%;
                                                                                                 background-color: ivory;
                                                                                                 top: -35%;
@@ -241,14 +241,8 @@
                                                                                                 }
                                                                                             }
                                                                                             
-                                                                                            @media screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
-                                                                                                html {
-                                                                                                    transform: rotate(-90deg);
-                                                                                                    transform-origin: left top;
-                                                                                                    width: 100vh;
-                                                                                                    overflow-x: hidden;
-                                                                                                    position: absolute;
-                                                                                                    top: 100%;
-                                                                                                    left: 0;
+                                                                                            @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+                                                                                                .nav-bg {
+                                                                                                    width: 125%;
                                                                                                 }
                                                                                             }
