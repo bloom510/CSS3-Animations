@@ -23,7 +23,7 @@ $(document).ready(function() {
     }
 
     //get current position of link and move the slider
-    let current_pos = ($('nav').width() / 6.8) * $('.current').index();
+    let current_pos = ($('nav').width() / 8) * $('.current').index();
     $('.slider').css('margin-left', `${current_pos}px`)
 
     $('nav li').click(function() {
@@ -42,8 +42,8 @@ $(document).ready(function() {
         $(this).addClass('current');
 
         //get current position of link and move the slider
-        let current_pos = ($('nav').width() / 6.8) * $('.current').index();
-        $('.slider').css('left', `${current_pos}px`)
+        let current_pos = ($('nav').width() / 8) * $('.current').index();
+        $('.slider').css('margin-left', `${current_pos}px`)
 
         //page is new click
         page = $(this).attr('page');
